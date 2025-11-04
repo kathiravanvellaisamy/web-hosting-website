@@ -1,11 +1,22 @@
+import { Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+import Hosting from "./pages/Hosting"
+import Domain from "./pages/Domain"
+import About from './pages/About'
+import Contact from "./pages/Contact"
+import Auth from "./pages/Auth"
 
 
 const App = () => {
   return (
-    <div className="my-12 max-w-4xl mx-auto py-12">
-      <h1 className="text-5xl text-red-500 text-center">Reliable Web Hosting & Cloud Services</h1>
-      <h2 className="text-slate-700 text-center text-9xl">Host Nexa</h2>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/hosting" element={<Hosting />} />
+      <Route path="/domain" element={<Domain />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/auth" element={<Auth />} />   
+    </Routes>
   )
 }
 

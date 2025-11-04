@@ -8,3 +8,8 @@ body{
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
 }
+
+@theme{
+  --color-primary:#cc0411;
+  --color-dark:#1f2937;
+}
