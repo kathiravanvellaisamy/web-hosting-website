@@ -1,8 +1,11 @@
+import HeroSection from "../components/home/HeroSection.jsx"
 
 
 const Home = () => {
   return (
-    <div className="py-20 mx-auto max-w-5xl ">Home Page</div>
+    <div>
+      <HeroSection />
+    </div>
   )
 }
 
