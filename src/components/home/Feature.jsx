@@ -36,7 +36,7 @@ const Feature = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-8'>
                 {
                     HostingService.map((hosting)=>(
-                        <div key='hosting.id' className='bg-white p-12 rounded-2xl border border-primary/20 transform hover:scale-105 duration-500'>
+                        <div key={hosting.id} className='bg-white p-12 rounded-2xl border border-primary/20 transform hover:scale-105 duration-500'>
                             <img className='mb-6' src={hosting.image} alt={hosting.title} />
                             <h1 className='text-xl text-dark font-bold mb-4'>{hosting.title}</h1>
                             <p className='text-dark/80 mb-6'>{hosting.content}</p>
