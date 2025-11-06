@@ -31,7 +31,7 @@ const HeroSection = () => {
 
                     {/* right side */}
                     <div className='w-full md:w-1/2'>
-                        <img src={HeroImage} className='w-full' />
+                        <img src={HeroImage} className='w-full h-full object-center object-cover' />
                     </div>
                 </div>
         </div>
