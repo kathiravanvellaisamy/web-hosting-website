@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import Home from "./pages/Home"
 import Hosting from "./pages/Hosting"
 import Domain from "./pages/Domain"
@@ -10,9 +10,12 @@ import Footer from "./components/Footer";
 
 
 const App = () => {
+
+  const location = useLocation()
+  const hideHeaderFooter = ['/auth'].includes(location.pathname)
   return (
     <>
-      <Navbar />
+      {!hideHeaderFooter &&  <Navbar />}     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hosting" element={<Hosting />} />
@@ -21,7 +24,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/auth" element={<Auth />} />   
       </Routes>
-      <Footer />
+       {!hideHeaderFooter &&   <Footer />}
+     
     </>
   )
 }
