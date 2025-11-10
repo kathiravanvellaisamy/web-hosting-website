@@ -146,10 +146,10 @@ const Footer = () => {
 
             </div>
         </div>
-                <div className="border-t border-gray-400 mt-10 pt-6 text-center text-sm text-gray-300">
+        <div className="border-t border-gray-400 mt-10 pt-6 text-center text-sm text-gray-300">
                      © {new Date().getFullYear()} <span className="font-semibold text-white">Host Nexa</span>. 
                     All rights reserved. Powered by <span className="text-slate-400 hover:text-amber-500 font-medium cursor-pointer">Kathiravan Vellaisamy</span>.
-                </div>
+        </div>
     </footer>
   )
 }
