@@ -43,18 +43,21 @@ const Auth = () => {
           <input type="password" placeholder="Password" className="border border-primary/40 outline-none p-2 rounded-md" />
         </div>
 
-        <div className="flex justify-end items-end mb-3">
-        <a href="#" className="text-primary font-bold text-sm">Forgot Password</a>
-        </div>
+        {isLogin ? (
+          <div className="flex justify-end items-end mb-3">
+            <a href="#" className="text-primary font-bold text-sm">Forgot Password</a>
+          </div>
+        ):("")}
+
         <div className="flex justify-center items-center rounded-md py-3 px-5 bg-primary text-white">
            <button className="cursor-pointer">
             {isLogin ? "Sign In":"Sign Up"}
            </button>
         </div>
         <p className="text-sm mt-2 text-center">
-          {isLogin ? "Have no account yet? Up " : "You already have an Account?"}
+          {isLogin ? "Have no account yet?  " : "You already have an Account?"}
           
-           <a   onClick={()=>setIsLogin(!isLogin)}  className="text-primary cursor-pointer">
+           <a   onClick={()=>setIsLogin(!isLogin)}  className="text-primary cursor-pointer ml-1">
           {isLogin ? "Sign Up " : "Sign In"}
           </a>
         </p>
