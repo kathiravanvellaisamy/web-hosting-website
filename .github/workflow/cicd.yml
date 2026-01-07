@@ -20,6 +20,13 @@ jobs:
   deploy:
     needs:build
     runs-on: aws-ec2
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull aws26kathir/reactdevops:latest
+      - name: Delete Old Container
+        run: docker rm -f reactContainer
+      - name: Run Docker Container
+        run: docker run -d -p 3000:80 --name reactContainer aws26kathir/reactdevops:latest
 
 
         
