@@ -115,7 +115,7 @@ const Footer = () => {
                     <ul className="space-y-2">
                         {
                             Services.map((service)=>(
-                                <li className="text-[15px] text-slate-400 cursor-pointer">{service.name}</li>
+                                <li key={service.id} className="text-[15px] text-slate-400 cursor-pointer">{service.name}</li>
                             ))
                         }
                     </ul>
@@ -126,7 +126,7 @@ const Footer = () => {
                     <ul className="space-y-2">
                         {
                             Company.map((item)=>(
-                                <li className="text-[15px] text-slate-400 cursor-pointer">{item.name}</li>
+                                <li key={item.id} className="text-[15px] text-slate-400 cursor-pointer">{item.name}</li>
                             ))
                         }
                     </ul>
@@ -137,7 +137,7 @@ const Footer = () => {
                     <ul className="space-y-2">
                         {
                             Support.map((item)=>(
-                                <li className="text-[15px] text-slate-400 cursor-pointer">{item.name}</li>
+                                <li key={item.id} className="text-[15px] text-slate-400 cursor-pointer">{item.name}</li>
                             ))
                         }
                     </ul>
